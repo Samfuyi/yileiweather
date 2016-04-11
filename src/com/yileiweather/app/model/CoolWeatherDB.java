@@ -9,7 +9,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public class CoolWeatherDB {
 	/**
@@ -92,7 +91,7 @@ public class CoolWeatherDB {
 			do{
 				City city=new City();
 				city.setId(cursor.getInt(cursor.getColumnIndex("city_id")));
-				city.setCityName(cursor.getString(cursor.getColumnIndex("city_ame")));
+				city.setCityName(cursor.getString(cursor.getColumnIndex("city_name")));
 				city.setCityCode(cursor.getString(cursor.getColumnIndex("city_code")));
 				city.setProvinceId(provinceId);
 				list.add(city);
